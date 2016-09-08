@@ -37,6 +37,9 @@ $('#playSubmit').on('click', function(){
     guessThree: $('.pThreeIn').val(),
     guessFour: $('.pFourIn').val()
   };
+  for (var i = 0; i < $('.lastGuess').length; i++) {
+    console.log($('.lastGuess')[i]);
+  }
   $.ajax({
     type: 'POST',
     url: '/guess',
