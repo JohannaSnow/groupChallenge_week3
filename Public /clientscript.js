@@ -31,7 +31,7 @@ $('#gameStart').on('click', function(){
       type: 'POST',
       url: '/guess',
       data: guessData,
-      success: function(){
+      success: function(data){
         console.log('guesses - ' + data );
       }//end Guess
     });//end guess ajax
