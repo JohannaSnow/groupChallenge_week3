@@ -10,14 +10,12 @@
 <body>
   <div id="startScreen" class="container">
     <div id="startTitle" class="row">
-
     </div>
-
     <div id="startInfo" class="row">
       <div class="btn-group">
       <!--  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose a Max. Number<span class="caret"></span></button>
         <ul class = "dropdown-menu">-->
-        <select class="btn">
+        <select id="maxNumSelect" class="btn">
           <option value=10>10</option>
           <option value=10>50</option>
           <option value=10>100</option>
@@ -32,7 +30,8 @@
 
   <div id="playScreen" class="container">
     <div id="playTitle" class="row">
-
+      <h1>Deactivate Hal</h1>
+      <h2>Guess an integer</h2>
     </div>
     <div id="playField" class="row">
       <div class="playColumn">
@@ -41,10 +40,10 @@
       </div>
       <div class="playResults">
         <div class="row">
-          <div id="pOneGuess" class="">
+          <div id="pOneGuess" class="lastGuess">
 
           </div>
-          <div id="pThreeGuess" class="">
+          <div id="pThreeGuess" class="lastGuess">
 
           </div>
         </div>
@@ -52,10 +51,10 @@
 
         </div>
         <div class="row">
-          <div id="pTwoGuess" class="">
+          <div id="pTwoGuess" class="lastGuess">
 
           </div>
-          <div id="pFourGuess" class="">
+          <div id="pFourGuess" class="lastGuess">
 
           </div>
         </div>
