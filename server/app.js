@@ -33,6 +33,7 @@ app.post('/guess', urlencodedParser, function(req, res){
     results.push(Number(req.body[guess]));
   }
   results = results.map(function(index){
+    console.log('in map');
     var newIndex = {
       correct: index === randomNum,
     };
@@ -44,6 +45,7 @@ app.post('/guess', urlencodedParser, function(req, res){
         newIndex.hiLow = 'Low';
       }
     }
+    console.log(newIndex);
     return newIndex
   });//end map
   res.send(results);

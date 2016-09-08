@@ -12,7 +12,7 @@ var numberOfGuesses = 0;
 
 $('#startButton').on('click', function(){
   console.log('Game Starting, Dave');
-  var gameStartData = {max: $('#maxNumSelect').val()};//maxNumber
+  var gameStartData = {max: $('#maxNumSelect option:selected').val()};//maxNumber
   $.ajax({
     type:'POST',
     url:"/gameStart",
@@ -32,20 +32,17 @@ $('#startButton').on('click', function(){
 $('#playSubmit').on('click', function(){
   console.log('Sending Guess to server, Dave');
   var guessData = {
-    guessOne: $('.pOneIn').val(),
-    guessTwo: $('.pTwoIn').val(),
-    guessThree: $('.pThreeIn').val(),
-    guessFour: $('.pFourIn').val()
+    guessOne: $('#pOneIn').val(),
+    guessTwo: $('#pTwoIn').val(),
+    guessThree: $('#pThreeIn').val(),
+    guessFour: $('#pFourIn').val()
   };
-  for (var i = 0; i < $('.lastGuess').length; i++) {
-    console.log($('.lastGuess')[i]);
-  }
   $.ajax({
     type: 'POST',
     url: '/guess',
     data: guessData,
     success: function(data){
-      console.log('guesses - ' + data );
+      console.log('guesses - ', data );
       numberOfGuesses++;
       for (var i = 0; i < data.length; i++) {
         if (data[i].correct) {
@@ -56,6 +53,9 @@ $('#playSubmit').on('click', function(){
           break;
         }//end if
       }//end for
+      for (var i = 0; i < data.length; i++) {
+        console.log(data[i].hiLow);
+      }
       //----do stuff to the DOM with data
     }//end Guess
   });//end guess ajax
