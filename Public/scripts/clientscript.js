@@ -47,6 +47,7 @@ $('#playSubmit').on('click', function(){
           $('#playScreen').fadeOut(400, function(){
             $('#resultScreen').fadeIn();
           });//end fadeOut
+          break;
         }//end if
       };//end for
       //----do stuff to the DOM with data
