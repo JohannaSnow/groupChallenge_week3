@@ -12,13 +12,18 @@
     <div id="startTitle" class="row">
       <div id=""
     </div>
+
     <div id="startInfo" class="row">
-      <button class="btn dropdown-toggle" data-toggle="dropdown"></button>
-      <ul class = "dropdown-menu">
-        <li>10</li>
-        <li>50</li>
-        <li>100</li>
-      </ul>
+      <div class="btn-group">
+      <!--  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose a Max. Number<span class="caret"></span></button>
+        <ul class = "dropdown-menu">-->
+        <select class="btn">
+          <option value=10>10</option>
+          <option value=10>50</option>
+          <option value=10>100</option>
+        </select>
+        <!--</ul>-->
+      </div>
     </div>
     <div id="startChoices" class="row">
       <button id="startButton" class="btn">Start Game</button>
@@ -35,7 +40,25 @@
         <input class="pTwoIn" data-type="number"></input>
       </div>
       <div class="playResults">
+        <div class="row">
+          <div id="pOneGuess" class="">
 
+          </div>
+          <div id="pThreeGuess" class="">
+
+          </div>
+        </div>
+        <div id="totalGuess" class="row">
+
+        </div>
+        <div class="row">
+          <div id="pTwoGuess" class="">
+
+          </div>
+          <div id="pFourGuess" class="">
+
+          </div>
+        </div>
       </div>
       <div class="playColumn">
         <input class="pThreeIn" data-type="number"></input>
