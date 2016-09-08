@@ -5,13 +5,14 @@ console.log('Document ready, Dave');
 
 var numberOfGuesses = 0;
 
-var gameStartData = {max: 50};//maxNumber
+
 
 //gameStart
 //guess
 
 $('#startButton').on('click', function(){
   console.log('Game Starting, Dave');
+  var gameStartData = {max: $('#maxNumSelect').val()};//maxNumber
   $.ajax({
     type:'POST',
     url:"/gameStart",
@@ -25,6 +26,8 @@ $('#startButton').on('click', function(){
     }//end Success
   });//end ajax /submit
 });//end gameStart click function
+
+
 
 $('#playSubmit').on('click', function(){
   console.log('Sending Guess to server, Dave');
@@ -49,7 +52,7 @@ $('#playSubmit').on('click', function(){
           });//end fadeOut
           break;
         }//end if
-      };//end for
+      }//end for
       //----do stuff to the DOM with data
     }//end Guess
   });//end guess ajax
@@ -60,13 +63,13 @@ $('#playQuit').on('click', function(){
   $('.container').fadeOut(400, function(){//-------CHANGE
     $('#resultScreen').fadeIn();
   });
-})
+});
 
 $('#resultRestart').on('click', function(){
   //do stuff to DOM, change to start page
   $('.container').fadeOut(400, function(){//---------CHANGE
     $('#startScreen').fadeIn();
   });
-})
+});
 
 });//end document ready
