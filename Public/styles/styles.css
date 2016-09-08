@@ -7,12 +7,12 @@ body{
   border: 1px solid black;
 
 }
-/*#playScreen {
+#playScreen {
   display: none;
-}*/
+}
 #resultScreen {
   display: none;
 }
-#startScreen {
+/*#startScreen {
   display: none;
-}
+}*/

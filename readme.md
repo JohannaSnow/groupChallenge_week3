@@ -1,6 +1,8 @@
 Things still to do
 ==================
 
+* change resultScreen to fail/winScreen
+* client take in max number from DOM
 * server calc and return of high/low
 * high/low indication of each guess
 * DOM stuff
