@@ -3,7 +3,7 @@
 <head>
   <title>Random Number Guess</title>
   <script src="vendors/jquery-3.1.0.min.js" charset="utf-8"></script>
-  <script src="styles/clientscript.js"></script>
+  <script src="scripts/clientscript.js"></script>
   <link rel="stylesheet" href="Vendors/bootstrap.min.css">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -13,7 +13,12 @@
 
     </div>
     <div id="startInfo" class="row">
-
+      <button class="btn dropdown-toggle" data-toggle="dropdown"></button>
+      <ul class = "dropdown-menu">
+        <li>10</li>
+        <li>50</li>
+        <li>100</li>
+      </ul>
     </div>
     <div id="startChoices" class="row">
       <button id="startButton" class="btn">Start Game</button>
@@ -26,13 +31,15 @@
     </div>
     <div id="playField" class="row">
       <div class="playColumn">
-
+        <input class="pOneIn" data-type="number"></input>
+        <input class="pTwoIn" data-type="number"></input>
       </div>
       <div class="playResults">
 
       </div>
       <div class="playColumn">
-
+        <input class="pThreeIn" data-type="number"></input>
+        <input class="pFourIn" data-type="number"></input>
       </div>
     </div>
     <div id="playChoices" class="row">
