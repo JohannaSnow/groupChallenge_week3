@@ -14,7 +14,6 @@ var gameStartData = //maxNumber
 //gameStart
 //guess
 
-
 $('#startButton').on('click', function(){
   console.log('Game Starting, Dave');
   $.ajax({
