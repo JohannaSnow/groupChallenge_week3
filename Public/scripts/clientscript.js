@@ -42,7 +42,7 @@ $('#playSubmit').on('click', function(){
       console.log('guesses - ' + data );
       numberOfGuesses++;
       for (var i = 0; i < data.length; i++) {
-        if (data[i]) {
+        if (data[i].correct) {
           //---------do stuff to resultScreen
           $('#playScreen').fadeOut(400, function(){
             $('#resultScreen').fadeIn();
