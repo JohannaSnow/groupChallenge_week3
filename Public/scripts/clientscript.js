@@ -2,14 +2,17 @@ console.log('The client script is sourced, Dave');
 
 $(document).ready(function(){
 console.log('Document ready, Dave');
-// var guessOne = 0;
-// var guessTwo = 0;
-// var guessThree = 0;
-// var guessFour = 0;
 
-var guessData = [ guessOne, guessTwo, guessThree, guessFour ];
+var numberOfGuesses = 0;
 
-var gameStartData = //maxNumber
+var guessData = {
+  guessOne: 15,
+  guessTwo: 0,
+  guessThree: 0,
+  guessFour: 0
+};
+
+var gameStartData = {max: 50};//maxNumber
 
 //gameStart
 //guess
@@ -38,11 +41,15 @@ $('#playSubmit').on('click', function(){
     data: guessData,
     success: function(data){
       console.log('guesses - ' + data );
-      if (/*someone wins*/) {
-        $('.container').fadeOut(400, function(){
-          $('#resultScreen').fadeIn();
-        });
-      }
+      numberOfGuesses++;
+      for (var i = 0; i < data.length; i++) {
+        if (data[i]) {
+          //---------do stuff to resultScreen
+          $('.container').fadeOut(400, function(){
+            $('#resultScreen').fadeIn();
+          });//end fadeOut
+        }//end if
+      };//end for
       //----do stuff to the DOM with data
     }//end Guess
   });//end guess ajax
