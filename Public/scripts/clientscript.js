@@ -5,13 +5,6 @@ console.log('Document ready, Dave');
 
 var numberOfGuesses = 0;
 
-var guessData = {
-  guessOne: 15,
-  guessTwo: 0,
-  guessThree: 0,
-  guessFour: 0
-};
-
 var gameStartData = {max: 50};//maxNumber
 
 //gameStart
@@ -36,6 +29,12 @@ $('#startButton').on('click', function(){
 
 $('#playSubmit').on('click', function(){
   console.log('Sending Guess to server, Dave');
+  var guessData = {
+    guessOne: $('.pOneIn').val(),
+    guessTwo: $('.pTwoIn').val(),
+    guessThree: $('.pThreeIn').val(),
+    guessFour: $('.pFourIn').val()
+  };
   $.ajax({
     type: 'POST',
     url: '/guess',
