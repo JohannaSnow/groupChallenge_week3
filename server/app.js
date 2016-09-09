@@ -33,7 +33,18 @@ app.post('/guess', urlencodedParser, function(req, res){
     results.push(Number(req.body[guess]));
   }
   results = results.map(function(index){
-    return index === randomNum;
+    var newIndex = {
+      correct: index === randomNum,
+    };
+    if (!newIndex.correct) {
+      if (index > randomNum) {
+        newIndex.hiLow = 'High';
+      }
+      else {
+        newIndex.hiLow = 'Low';
+      }
+    }
+    return newIndex
   });//end map
   res.send(results);
   //return something about how close each guess is

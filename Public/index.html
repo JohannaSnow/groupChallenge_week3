@@ -8,19 +8,17 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <div id="startScreen" class="container">
+  <div id="startScreen" class="container gameScreen">
     <div id="startTitle" class="row">
+
     </div>
     <div id="startInfo" class="row">
       <div class="btn-group">
-      <!--  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose a Max. Number<span class="caret"></span></button>
-        <ul class = "dropdown-menu">-->
         <select id="maxNumSelect" class="btn">
           <option value=10>10</option>
-          <option value=10>50</option>
-          <option value=10>100</option>
+          <option value=50>50</option>
+          <option value=100>100</option>
         </select>
-        <!--</ul>-->
       </div>
     </div>
     <div id="startChoices" class="row">
@@ -28,15 +26,15 @@
     </div>
   </div>
 
-  <div id="playScreen" class="container">
+  <div id="playScreen" class="container gameScreen">
     <div id="playTitle" class="row">
       <h1>Deactivate Hal</h1>
-      <h2>Guess an integer</h2>
+      <h2>Guess a Number</h2>
     </div>
     <div id="playField" class="row">
       <div class="playColumn">
-        <input class="pOneIn" data-type="number"></input>
-        <input class="pTwoIn" data-type="number"></input>
+        <input id="pOneIn" class="guessIn" data-type="number"></input>
+        <input id="pTwoIn" class="guessIn" data-type="number"></input>
       </div>
       <div class="playResults">
         <div class="row">
@@ -60,8 +58,8 @@
         </div>
       </div>
       <div class="playColumn">
-        <input class="pThreeIn" data-type="number"></input>
-        <input class="pFourIn" data-type="number"></input>
+        <input id="pThreeIn" class="guessIn" data-type="number"></input>
+        <input id="pFourIn" class="guessIn" data-type="number"></input>
       </div>
     </div>
     <div id="playChoices" class="row">
@@ -70,9 +68,9 @@
     </div>
   </div>
 
-  <div id="resultScreen" class="container">
+  <div id="resultScreen" class="container gameScreen">
     <div id="resultMessage" class="row">
-
+  
     </div>
     <div id="resultChoices" class="row">
       <button id="resultRestart" class="btn">Play Again!</button>
