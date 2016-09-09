@@ -39,7 +39,12 @@
     </div>
     <div id="startChoices" class="row">
       <div class="startSettings">
-        <h4 class="gameText">Select Mission Parameters</h4>
+        <h4 class="gameText">Enter Mission Parameters</h4>
+        <p class="gameText">Enter Astronaut Names</p>
+        <input id ="nameOneIn" type="text" placeholder="Player 1">
+        <input id ="nameTwoIn" type="text" placeholder="Player 2">
+        <input id ="nameThreeIn" type="text" placeholder="Player 3">
+        <input id ="nameFourIn" type="text" placeholder="Player 4">
         <p class="gameText">The upper limit of your guessing range will be:
           <select id="maxNumSelect" class="btn">
             <option value=10>10</option>
@@ -71,13 +76,13 @@
   <div id="playField" class="row">
     <div class="playColumn col-xs-3">
       <div class="row pGuessBox pGridBox">
-        <p>Player One</p>
+        <p id="nameOneOut">Player One</p>
         <input id="pOneIn" class="guessIn" type='number' data-type="number" tabindex="1" placeholder="Enter Your Guess"></input>
       </div>
       <div class="row pGridBox">
       </div>
       <div class="row pGuessBox pGridBox">
-        <p>Player Three</p>
+        <p id="nameThreeOut">Player Three</p>
         <input id="pThreeIn" class="guessIn" type='number' data-type="number" tabindex="3" placeholder="Enter Your Guess"></input>
       </div>
     </div>
@@ -104,13 +109,13 @@
     </div>
     <div class="playColumn col-xs-3">
       <div class="row pGuessBox pGridBox">
-        <p>Player Two</p>
+        <p id="nameTwoOut">Player Two</p>
         <input id="pTwoIn" class="guessIn" type='number' data-type="number" tabindex="2" placeholder="Enter Your Guess"></input>
       </div>
       <div class="row pGridBox">
       </div>
       <div class="row pGuessBox pGridBox">
-        <p>Player Four</p>
+        <p id="nameFourOut">Player Four</p>
         <input id="pFourIn" class="guessIn" type='number' data-type="number" tabindex="4" placeholder="Enter Your Guess"></input>
         </div>
     </div>
