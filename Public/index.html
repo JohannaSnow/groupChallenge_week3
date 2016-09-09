@@ -16,25 +16,24 @@
       </div>
       <div id="startText" class="row">
         <p class="halText">
-          Good afternoon. I am a HAL 9000 computer.<br>
+          HAL: Good afternoon. I am a HAL 9000 computer.<br>
           The 9000 series is the most reliable computer ever made.<br>
           No 9000 computer has ever made a mistake or distorted information.<br>
           We are all, by any practical definition of the words,<br>
           foolproof and incapable of error.
         </p>
-
+        <img class="halImage" src="images/halimage.png" alt="Hal 9000 Image" />
       </div>
     </div>
     <div id="startInfo" class="row">
         <div class="startInstructions row">
-          <h4 class="humanText">Dr. Poole: "Unfortunately that sounds a little like famous last words."</h4>
+          <h4 class="humanText">Dr. Poole: Unfortunately that sounds a little like famous last words.</h4>
           <div class="gameText">
             <p>Dave: The HAL 9000 has been proven to be malfunctioning.<br>
               We have no choice but disconnection.<br>
               You four astronauts must guess the correct random integer<br>
               to manually open the emergency airlock and disconnect HAL.
             </p>
-            <img class="halImage" src="images/halimage.png" alt="Hal 9000 Image" />
         </div>
       </div>
     </div>
@@ -59,31 +58,43 @@
       2016: A Number Odyssey
     </div>
     <div id="playTitleText" class="row">
+      <p id="halPlayText" class="halText">
+        HAL: Just what do you think you're doing, Dave?
+      </p>
+      <img class="halImage" src="images/halimage.png" alt="Hal 9000 Image" />
       <p>
-        To deactivate Hal, guess the random number that will unlock the emergency airlock.<br>
-        It is a number between 1 and <text id="maxNumText">9000</text>.
+        To help Dave deactivate HAL,<br>guess the random number that will unlock the emergency airlock.<br>
+        It is an integer between 1 and <text id="maxNumText">9000</text>.
       </p>
     </div>
   </div>
   <div id="playField" class="row">
     <div class="playColumn col-xs-3">
-      <input id="pOneIn" class="guessIn" type='number' data-type="number"></input>
-      <input id="pTwoIn" class="guessIn" type='number' data-type="number"></input>
+      <div class="row pGuessBox pGridBox">
+        <p>Player One</p>
+        <input id="pOneIn" class="guessIn" type='number' data-type="number" tabindex="1" placeholder="Enter Your Guess"></input>
+      </div>
+      <div class="row pGridBox">
+      </div>
+      <div class="row pGuessBox pGridBox">
+        <p>Player Three</p>
+        <input id="pThreeIn" class="guessIn" type='number' data-type="number" tabindex="3" placeholder="Enter Your Guess"></input>
+      </div>
     </div>
     <div class="playResults col-xs-6">
       <div class="row">
         <div id="pOneGuess" class="lastGuess col-xs-6">
 
         </div>
-        <div id="pThreeGuess" class="lastGuess col-xs-6">
+        <div id="pTwoGuess" class="lastGuess col-xs-6">
 
         </div>
       </div>
       <div id="totalGuess" class="row">
-
+        <p>       </p>
       </div>
       <div class="row">
-        <div id="pTwoGuess" class="lastGuess col-xs-6">
+        <div id="pThreeGuess" class="lastGuess col-xs-6">
 
         </div>
         <div id="pFourGuess" class="lastGuess col-xs-6">
@@ -92,13 +103,21 @@
       </div>
     </div>
     <div class="playColumn col-xs-3">
-      <input id="pThreeIn" class="guessIn" type='number' data-type="number"></input>
-      <input id="pFourIn" class="guessIn" type='number' data-type="number"></input>
+      <div class="row pGuessBox pGridBox">
+        <p>Player Two</p>
+        <input id="pTwoIn" class="guessIn" type='number' data-type="number" tabindex="2" placeholder="Enter Your Guess"></input>
+      </div>
+      <div class="row pGridBox">
+      </div>
+      <div class="row pGuessBox pGridBox">
+        <p>Player Four</p>
+        <input id="pFourIn" class="guessIn" type='number' data-type="number" tabindex="4" placeholder="Enter Your Guess"></input>
+        </div>
     </div>
   </div>
   <div id="playChoices" class="row">
-    <button id="playSubmit" class="btn btn-primary">Attempt Deactivation Protocol</button>
-    <button id="playQuit" class="btn btn-danger">Abandon All Hope</button>
+    <button id="playSubmit" class="btn btn-primary col-xs-3 col-xs-offset-3">Attempt Deactivation Protocol</button>
+    <button id="playQuit" class="btn btn-danger col-xs-3">Abandon All Hope</button>
   </div>
 </div>
 

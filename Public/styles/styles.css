@@ -1,8 +1,48 @@
 body{
+  font-size: 20px;
   text-align: center;
   background-color: black;
   color: lightgray;
 }
+
+h4 {
+  font-size: 30px;
+}
+
+input {
+  text-align: center;
+}
+
+#playScreen {
+  display: none;
+}
+#winScreen {
+  display: none;
+}
+#failScreen {
+  display: none;
+}
+/*#startScreen {
+  display: none;
+}*/
+
+#playSubmit, #playQuit {
+  border: 1px solid black;
+}
+
+#playScreen {
+  background-color: transparent;
+  background-image: url("images/halimage.png");
+  background-position: top center;
+  background-size: auto;
+}
+
+#totalGuess p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .container {
   width:90%;
   border: 1px solid black;
@@ -12,7 +52,8 @@ body{
 }
 
 .gameTitle {
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .halText {
@@ -28,25 +69,25 @@ body{
   background-color: #444444;
 }
 
-#playScreen {
-  display: none;
-}
-#winScreen {
-  display: none;
-}
-#failScreen {
-  display: none;
-}
-/*#startScreen {
-  display: none;
-}*/
-.halImage{
+.halImage {
   width: 200px;
 }
-.lastGuess{
-  height: auto;
-
+.lastGuess, #totalGuess {
+  height: 100px;
+  border: 1px solid black;
 }
+
+.pGridBox {
+  height: 100px;
+}
+
+.lastGuess p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
 /*.resultScreen{
   height: 1000px;
 -webkit-animation: expand 5s;
