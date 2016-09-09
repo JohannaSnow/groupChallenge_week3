@@ -5,11 +5,11 @@ body{
 }
 .container {
   width:90%;
-  height:500px;
   border: 1px solid black;
-
 }
-
+.btn {
+  color: black;
+}
 .gameTitle {
   font-size: 30px;
 }
@@ -32,6 +32,5 @@ body{
   display: none;
 }*/
 .halImage{
-  height: 100px;
-  width: 100px;
+  width: 200px;
 }
