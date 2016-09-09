@@ -34,10 +34,10 @@ $(document).ready(function(){
       data: gameStartData,
       success: function(data){
         console.log('gameStart call successful');
-        $('#nameOneOut').html($('#nameOneIn').val());
-        $('#nameTwoOut').html($('#nameTwoIn').val());
-        $('#nameThreeOut').html($('#nameThreeIn').val());
-        $('#nameFourOut').html($('#nameFourIn').val());
+        $('#nameOneOut').html($('#nameOneIn').val()||$('#nameOneIn').attr('placeholder'));
+        $('#nameTwoOut').html($('#nameTwoIn').val()||$('#nameTwoIn').attr('placeholder'));
+        $('#nameThreeOut').html($('#nameThreeIn').val()||$('#nameThreeIn').attr('placeholder'));
+        $('#nameFourOut').html($('#nameFourIn').val()||$('#nameFourIn').attr('placeholder'));
         $('#startScreen').fadeOut(400, function(){
           $('#playScreen').fadeIn();
         });
