@@ -8,6 +8,7 @@ $(document).ready(function(){
   $('#startButton').on('click', function(){
     console.log('Game Starting, Dave');
     var gameStartData = {max: $('#maxNumSelect option:selected').val()};//maxNumber
+    $('#maxNumText').html(gameStartData.max)
     $.ajax({
       type:'POST',
       url:"/gameStart",
