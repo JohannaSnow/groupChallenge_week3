@@ -1,5 +1,5 @@
 body{
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   background-color: black;
   color: lightgray;
@@ -11,6 +11,7 @@ h4 {
 
 input {
   text-align: center;
+  color: black;
 }
 
 #playScreen {
@@ -28,13 +29,6 @@ input {
 
 #playSubmit, #playQuit {
   border: 1px solid black;
-}
-
-#playScreen {
-  background-color: transparent;
-  background-image: url("images/halimage.png");
-  background-position: top center;
-  background-size: auto;
 }
 
 #totalGuess p {
@@ -86,12 +80,9 @@ input {
   top: 50%;
   transform: translateY(-50%);
 }
-<<<<<<< HEAD
- 
-=======
-
-
->>>>>>> 4580ea5187c569abffaf532550d8579f46cf7b78
+h1{
+  color: darkred;
+}
 /*.resultScreen{
   height: 1000px;
 -webkit-animation: expand 5s;
