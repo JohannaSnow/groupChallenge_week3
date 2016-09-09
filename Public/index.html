@@ -10,51 +10,46 @@
 <body>
   <div id="startScreen" class="container gameScreen">
     <div id="startTitle" class="row">
+
       <div class="gameTitle row">
         2016: A Number Odyssey
       </div>
       <div id="startText" class="row">
         <p class="halText">
-          The 9000 series is the most reliable computer ever made. No 9000 computer has ever made a mistake or distorted information. We are all, by any practical definition of the words, foolproof and incapable of error.
+          Good afternoon. I am a HAL 9000 computer.<br>
+          The 9000 series is the most reliable computer ever made.<br>
+          No 9000 computer has ever made a mistake or distorted information.<br>
+          We are all, by any practical definition of the words,<br>
+          foolproof and incapable of error.
         </p>
+
       </div>
     </div>
-
     <div id="startInfo" class="row">
-      <div class="startInstructions row">
-        <h4 class="humanText">Unfortunately that sounds a little like famous last words.</h4>
-        <div class="gameText">
-          <p>The HAL 9000 has been proven to be malfunctioning.  You have no choice but disconnection.</p>
-          <p>You four players must guess the correct random integer to manually open the emergency airlock and disconnect HAL.</p>
+        <div class="startInstructions row">
+          <h4 class="humanText">Dr. Poole: "Unfortunately that sounds a little like famous last words."</h4>
+          <div class="gameText">
+            <p>The HAL 9000 has been proven to be malfunctioning.  You have no choice but disconnection.</p>
+            <p>You four players must guess the correct random integer to manually open the emergency airlock and disconnect HAL.</p>
+          <img class="halImage" src="images/halimage.png" alt="Hal 9000 Image" />
         </div>
       </div>
     </div>
     <div id="startChoices" class="row">
       <div class="startSettings">
         <h4 class="gameText">Select Mission Parameters</h4>
-        <p class="gameText">The upper limit of your guessing range will be:</p>
-        <select id="maxNumSelect" class="btn">
-          <option value=10>10</option>
-          <option value=50>50</option>
-          <option value=100>100</option>
-          <option value=9000>9000</option>
-        </select>
-      </div>
-      <button id="startButton" class="btn row">Start Guessing</button>
-    </div>
-  </div>
-
-  <div id="playScreen" class="container gameScreen">
-    <div id="playTitle" class="row">
-      <div class="gameTitle row">
-        2016: A Number Odyssey
-      </div>
-      <div id="playTitleText" class="row">
-        <p>
-          To deactivate Hal, guess a random number between 0 and <text id="maxNumText">9000</text>.
+        <p class="gameText">The upper limit of your guessing range will be:
+          <select id="maxNumSelect" class="btn">
+            <option value=10>10</option>
+            <option value=50>50</option>
+            <option value=100>100</option>
+            <option value=9000>9000</option>
+          </select>
         </p>
       </div>
+      <button id="startButton" class="btn btn-danger row">Begin Deactivation Protocol</button>
     </div>
+<<<<<<< HEAD
     <div id="playField" class="row">
       <div class="playColumn">
         <input id="pOneIn" type="number" class="guessIn" data-type="number"></input>
@@ -63,43 +58,75 @@
       <div class="playResults">
         <div class="row">
           <div id="pOneGuess" class="lastGuess">
+=======
+</div>
+<div id="playScreen" class="container gameScreen">
+  <div id="playTitle" class="row">
+    <h1>Deactivate Hal</h1>
+    <h2>Guess a Number</h2>
+>>>>>>> 848d4d1ea400ccce0dedb2dd5d4c1290536d9c21
 
-          </div>
-          <div id="pThreeGuess" class="lastGuess">
+    <div class="gameTitle row">
+      2016: A Number Odyssey
+    </div>
+    <div id="playTitleText" class="row">
+      <p>
+        To deactivate Hal, guess a random number between 1 and <text id="maxNumText">9000</text>.
+      </p>
+    </div>
+  </div>
+  <div id="playField" class="row">
+    <div class="playColumn">
+      <input id="pOneIn" class="guessIn" data-type="number"></input>
+      <input id="pTwoIn" class="guessIn" data-type="number"></input>
+    </div>
+    <div class="playResults">
+      <div class="row">
+        <div id="pOneGuess" class="lastGuess">
 
-          </div>
         </div>
-        <div id="totalGuess" class="row">
+        <div id="pThreeGuess" class="lastGuess">
 
         </div>
-        <div class="row">
-          <div id="pTwoGuess" class="lastGuess">
+      </div>
+      <div id="totalGuess" class="row">
 
-          </div>
-          <div id="pFourGuess" class="lastGuess">
+      </div>
+      <div class="row">
+        <div id="pTwoGuess" class="lastGuess">
 
-          </div>
         </div>
+        <div id="pFourGuess" class="lastGuess">
+
+        </div>
+<<<<<<< HEAD
       </div>
       <div class="playColumn">
         <input id="pThreeIn" type="number" class="guessIn" data-type="number"></input>
         <input id="pFourIn" type="number" class="guessIn" data-type="number"></input>
+=======
+>>>>>>> 848d4d1ea400ccce0dedb2dd5d4c1290536d9c21
       </div>
     </div>
-    <div id="playChoices" class="row">
-      <button id="playSubmit" class="btn">Submit Guesses</button>
-      <button id="playQuit" class="btn">Abandon All Hope</button>
+    <div class="playColumn">
+      <input id="pThreeIn" class="guessIn" data-type="number"></input>
+      <input id="pFourIn" class="guessIn" data-type="number"></input>
     </div>
   </div>
-
-  <div id="resultScreen" class="container gameScreen">
-    <div id="resultMessage" class="row">
-
-    </div>
-    <div id="resultChoices" class="row">
-      <button id="resultRestart" class="btn">Play Again!</button>
-    </div>
+  <div id="playChoices" class="row">
+    <button id="playSubmit" class="btn">Attempt Deactivation Protocol</button>
+    <button id="playQuit" class="btn">Abandon All Hope</button>
   </div>
+</div>
+
+<div id="resultScreen" class="container gameScreen">
+  <div id="resultMessage" class="row">
+
+  </div>
+  <div id="resultChoices" class="row">
+    <button id="resultRestart" class="btn">Play Again!</button>
+  </div>
+</div>
 
 </body>
 </html>
