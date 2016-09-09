@@ -8,12 +8,12 @@ var randomNum = 0;
 
 app.listen('3001', 'localhost', function(){
   console.log('listening in 3001');
-});
+});//end listen
 
 app.get('/', function(req, res){
   console.log('base url hit');
   res.sendFile(path.resolve('Public/index.html'));
-});
+});//end get
 
 app.post('/gameStart', urlencodedParser, function(req, res){
   console.log('gameStart hit:', req.body);
@@ -21,9 +21,7 @@ app.post('/gameStart', urlencodedParser, function(req, res){
   randomNum = Math.floor(Math.random() * (req.body.max - 1) + 1);
   res.send();
   console.log(randomNum);
-});
-
-//data is an array of numbers
+});//end gameStart post
 
 app.post('/guess', urlencodedParser, function(req, res){
   console.log('guess hit:', req.body);
@@ -42,13 +40,12 @@ app.post('/guess', urlencodedParser, function(req, res){
       }
       else {
         newIndex.hiLow = 'low';
-      }
-    }
+      }//end inner if/else
+    }//end outer if
     results.push(newIndex);
-  }
+  }//end for
   res.send(results);
   //return something about how close each guess is
-});
-//res.send booleans
+});//end guess post
 
 app.use(express.static('Public'));

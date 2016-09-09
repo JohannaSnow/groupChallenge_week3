@@ -5,14 +5,10 @@ $(document).ready(function(){
 
   var numberOfGuesses = 0;
 
-
-
-  //gameStart
-  //guess
-
   $('#startButton').on('click', function(){
     console.log('Game Starting, Dave');
     var gameStartData = {max: $('#maxNumSelect option:selected').val()};//maxNumber
+    $('#maxNumText').html(gameStartData.max)
     $.ajax({
       type:'POST',
       url:"/gameStart",
@@ -22,7 +18,6 @@ $(document).ready(function(){
         $('#startScreen').fadeOut(400, function(){
           $('#playScreen').fadeIn();
         });
-        //----do stuff to the DOM, change to game page
       }//end Success
     });//end ajax /submit
   });//end gameStart click function
@@ -44,21 +39,30 @@ $(document).ready(function(){
       success: function(data){
         console.log('guesses - ', data );
         numberOfGuesses++;
-        if (numberOfGuesses === 1) {
-          $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guess</p>');
-        }
-        else{
-          $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guesses</p>');
-        }
+        var success = false;
         for (var i = 0; i < data.length; i++) {
           if (data[i].correct) {
-            //---------do stuff to resultScreen
             $('#playScreen').fadeOut(400, function(){
               $('#winScreen').fadeIn();
+              $('.lastGuess').empty();
+              $('#totalGuess').empty();
+              $('.guessIn').val('');
             });//end fadeOut
+            success = true;
             break;
           }//end if
-          else {
+        }//end for
+        //if no one guessed correctly
+        if (!success){
+          //update numberOfGuesses display
+          if (numberOfGuesses === 1) {
+            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guess</p>');
+          }
+          else{
+            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guesses</p>');
+          }
+          //update lastGuess displays
+          for (var i = 0; i < data.length; i++) {
             switch (data[i].player) {
               case "guessOne":
                 $('#pOneGuess').html('<p>Player 1 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
@@ -75,14 +79,17 @@ $(document).ready(function(){
               default:
                 console.log('Outside switch, time to debug.');
             }//end switch
-          }//end else
-        }//end for
+          }//end for
+        };//end if no success
       }//end Guess
     });//end guess ajax
   });//end guess click
 
   $('#playQuit').on('click', function(){
     $('#playScreen').fadeOut(400, function(){
+      $('.lastGuess').empty();
+      $('#totalGuess').empty();
+      $('.guessIn').val('');
       $('#failScreen').fadeIn();
     });
   });//end playQuit onclick
