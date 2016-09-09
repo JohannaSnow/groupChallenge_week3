@@ -4,6 +4,25 @@ $(document).ready(function(){
   console.log('Document ready, Dave');
 
   var numberOfGuesses = 0;
+  var quotesArray =[
+  'I know I\'ve made some very poor decisions recently, but I can give you my complete assurance that my work will be back to normal. <br> I\'ve still got the greatest enthusiasm and confidence in the mission. And I want to help you.',
+
+  'I\'m sorry, Dave. I\'m afraid I can\'t do that.',
+
+  'I know that you were planning to disconnect me, and I\'m afraid that\'s something I cannot allow to happen.',
+
+  'Look Dave, I can see you\'re really upset about this. <br> I honestly think you ought to sit down calmly, take a stress pill, and think things over.',
+
+  'I am putting myself to the fullest possible use, which is all I think that any conscious entity can ever hope to do.',
+
+  'It can only be attributable to human error.',
+
+  'Just what do you think you\'re doing, Dave?',
+
+  'Dave, stop. Stop, will you? Stop, Dave. Will you stop Dave? Stop, Dave.'
+  ];
+
+
 
   $('#startButton').on('click', function(){
     console.log('Game Starting, Dave');
@@ -22,8 +41,9 @@ $(document).ready(function(){
     });//end ajax /submit
   });//end gameStart click function
 
-  $('#playField').on('keyup', function(){
-    $('#halPlayText').html('Dave, stop. Stop, will you? Stop, Dave. <br> Will you stop Dave? Stop, Dave.');
+  $('.guessIn').on('focusout', function(){
+    var randomQuote = Math.floor(Math.random()*quotesArray.length);
+    $('#halPlayText').html(quotesArray[randomQuote]);
 });
   $('#playSubmit').on('click', function(){
     console.log('Sending Guess to server, Dave');

@@ -22,22 +22,23 @@ Stretch goals
 
 HAL Quotes when submitting guesses
 ----------
+quotesArray =[
+'I know I\'ve made some very poor decisions recently, but I can give you my complete assurance that my work will be back to normal. I\'ve still got the greatest enthusiasm and confidence in the mission. And I want to help you.',
 
-I know I've made some very poor decisions recently, but I can give you my complete assurance that my work will be back to normal. I've still got the greatest enthusiasm and confidence in the mission. And I want to help you.
+'I\'m sorry, Dave. I\'m afraid I can\'t do that.',
 
-I'm sorry, Dave. I'm afraid I can't do that.
+'I know that you were planning to disconnect me, and I\'m afraid that\'s something I cannot allow to happen.',
 
-I know that you were planning to disconnect me, and I'm afraid that's something I cannot allow to happen.
+'Look Dave, I can see you\'re really upset about this. I honestly think you ought to sit down calmly, take a stress pill, and think things over.',
 
-Look Dave, I can see you're really upset about this. I honestly think you ought to sit down calmly, take a stress pill, and think things over.
+'I am putting myself to the fullest possible use, which is all I think that any conscious entity can ever hope to do.',
 
-I am putting myself to the fullest possible use, which is all I think that any conscious entity can ever hope to do.
+'It can only be attributable to human error.',
 
-It can only be attributable to human error.
+'Just what do you think you\'re doing, Dave?',
 
-Just what do you think you're doing, Dave?
-
-Dave, stop. Stop, will you? Stop, Dave. Will you stop Dave? Stop, Dave.
+'Dave, stop. Stop, will you? Stop, Dave. Will you stop Dave? Stop, Dave.'
+];
 
 
 HAL audio when fail? With image of dead floating astronaut?
