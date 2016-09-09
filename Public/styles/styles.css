@@ -26,7 +26,10 @@ body{
 #playScreen {
   display: none;
 }
-#resultScreen {
+#winScreen {
+  display: none;
+}
+#failScreen {
   display: none;
 }
 /*#startScreen {
@@ -36,6 +39,6 @@ body{
   width: 200px;
 }
 .lastGuess{
-  height: 20px;
+  height: auto;
   background-color: blue;
 }
