@@ -40,7 +40,7 @@ body{
 /*#startScreen {
   display: none;
 }*/
-.halImage{
+.halImage {
   width: 200px;
 }
 .lastGuess, #totalGuess {
@@ -50,6 +50,12 @@ body{
 
 #playSubmit, #playQuit {
   border: 1px solid black;
+}
+
+#totalGuess p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*.resultScreen{
