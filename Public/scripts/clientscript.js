@@ -42,6 +42,22 @@ $(document).ready(function(){
         var success = false;
         for (var i = 0; i < data.length; i++) {
           if (data[i].correct) {
+            switch (data[i].player) {
+              case "guessOne":
+                $('#winMessage p').html('Player 1 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                break;
+              case "guessTwo":
+                $('#winMessage p').html('Player 2 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                break;
+              case "guessThree":
+                $('#winMessage p').html('Player 3 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                break;
+              case "guessFour":
+                $('#winMessage p').html('Player 4 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                break;
+              default:
+                console.log('Outside switch, time to debug.');
+            }//end switch
             $('#playScreen').fadeOut(400, function(){
               $('#winScreen').fadeIn();
               $('.lastGuess').empty();
