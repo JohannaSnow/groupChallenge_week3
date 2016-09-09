@@ -34,10 +34,10 @@ $(document).ready(function(){
       data: gameStartData,
       success: function(data){
         console.log('gameStart call successful');
-        $('#nameOneOut').html($('#nameOneIn').val()||$('#nameOneIn').attr('placeholder'));
-        $('#nameTwoOut').html($('#nameTwoIn').val()||$('#nameTwoIn').attr('placeholder'));
-        $('#nameThreeOut').html($('#nameThreeIn').val()||$('#nameThreeIn').attr('placeholder'));
-        $('#nameFourOut').html($('#nameFourIn').val()||$('#nameFourIn').attr('placeholder'));
+        $('#nameOneOut').html($('#nameOneIn').val() || $('#nameOneIn').attr('placeholder'));
+        $('#nameTwoOut').html($('#nameTwoIn').val() || $('#nameTwoIn').attr('placeholder'));
+        $('#nameThreeOut').html($('#nameThreeIn').val() || $('#nameThreeIn').attr('placeholder'));
+        $('#nameFourOut').html($('#nameFourIn').val() || $('#nameFourIn').attr('placeholder'));
         $('#startScreen').fadeOut(400, function(){
           $('#playScreen').fadeIn();
         });
@@ -90,6 +90,7 @@ $(document).ready(function(){
               $('.lastGuess').css({"background-color": "#444444"});
               $('#totalGuess').empty();
               $('.guessIn').val('');
+              $('.nameIn').val('');
             });//end fadeOut
             success = true;
             break;
@@ -159,6 +160,7 @@ $(document).ready(function(){
       $('#totalGuess').empty();
       $('.guessIn').val('');
       $('#failScreen').fadeIn();
+      $('.nameIn').val('');
     });
   });//end playQuit onclick
 
