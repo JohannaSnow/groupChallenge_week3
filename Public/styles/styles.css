@@ -80,8 +80,10 @@ input {
   top: 50%;
   transform: translateY(-50%);
 }
-h1{
-  color: darkred;
+h3{
+  background: -webkit-linear-gradient(darkred, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*.resultScreen{
   height: 1000px;
