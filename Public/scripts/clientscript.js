@@ -52,10 +52,25 @@ $('#playSubmit').on('click', function(){
           });//end fadeOut
           break;
         }//end if
+        else {
+          switch (data[i].player) {
+            case "guessOne":
+              $('#pOneGuess').html('<p>Player 1 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+              break;
+            case "guessTwo":
+              $('#pTwoGuess').html('<p>Player 2 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+              break;
+            case "guessThree":
+              $('#pThreeGuess').html('<p>Player 3 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+              break;
+            case "guessFour":
+              $('#pFourGuess').html('<p>Player 4 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+              break;
+            default:
+              console.log('Outside switch, time to debug.');
+          }
+        }
       }//end for
-      for (var i = 0; i < data.length; i++) {
-        console.log(data[i].hiLow);
-      }
       //----do stuff to the DOM with data
     }//end Guess
   });//end guess ajax
