@@ -34,10 +34,12 @@ $(document).ready(function(){
       data: gameStartData,
       success: function(data){
         console.log('gameStart call successful');
+        //use entered name or placeholder value
         $('#nameOneOut').html($('#nameOneIn').val() || $('#nameOneIn').attr('placeholder'));
         $('#nameTwoOut').html($('#nameTwoIn').val() || $('#nameTwoIn').attr('placeholder'));
         $('#nameThreeOut').html($('#nameThreeIn').val() || $('#nameThreeIn').attr('placeholder'));
         $('#nameFourOut').html($('#nameFourIn').val() || $('#nameFourIn').attr('placeholder'));
+        //switch screens
         $('#startScreen').fadeOut(400, function(){
           $('#playScreen').fadeIn();
         });
@@ -48,7 +50,8 @@ $(document).ready(function(){
   $('.guessIn').on('focusout', function(){
     var randomQuote = Math.floor(Math.random()*quotesArray.length);
     $('#halPlayText').html(quotesArray[randomQuote]);
-});
+  });//end focusout
+
   $('#playSubmit').on('click', function(){
     console.log('Sending Guess to server, Dave');
     var guessData = {
@@ -84,6 +87,7 @@ $(document).ready(function(){
               default:
                 console.log('Outside switch, time to debug.');
             }//end switch
+            //clear game data and switch screen
             $('#playScreen').fadeOut(400, function(){
               $('#winScreen').fadeIn();
               $('.lastGuess').empty();
@@ -154,6 +158,7 @@ $(document).ready(function(){
   });//end guess click
 
   $('#playQuit').on('click', function(){
+    //clear game data and switch screen
     $('#playScreen').fadeOut(400, function(){
       $('.lastGuess').empty();
       $('.lastGuess').css({"background-color": "#444444"});
