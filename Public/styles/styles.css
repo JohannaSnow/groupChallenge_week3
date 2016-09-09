@@ -7,9 +7,10 @@ body{
   width:90%;
   border: 1px solid black;
 }
-.btn {
+.btn, .guessIn {
   color: black;
 }
+
 .gameTitle {
   font-size: 30px;
 }
@@ -33,4 +34,8 @@ body{
 }*/
 .halImage{
   width: 200px;
+}
+.lastGuess{
+  height: 20px;
+  background-color: blue;
 }
