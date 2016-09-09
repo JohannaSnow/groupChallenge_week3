@@ -15,6 +15,10 @@ $(document).ready(function(){
       data: gameStartData,
       success: function(data){
         console.log('gameStart call successful');
+        $('#nameOneOut').html($('#nameOneIn').val());
+        $('#nameTwoOut').html($('#nameTwoIn').val());
+        $('#nameThreeOut').html($('#nameThreeIn').val());
+        $('#nameFourOut').html($('#nameFourIn').val());
         $('#startScreen').fadeOut(400, function(){
           $('#playScreen').fadeIn();
         });
@@ -44,16 +48,16 @@ $(document).ready(function(){
           if (data[i].correct) {
             switch (data[i].player) {
               case "guessOne":
-                $('#winMessage p').html('Player 1 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                $('#winMessage p').html($('#nameOneIn').val() + ' succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
                 break;
               case "guessTwo":
-                $('#winMessage p').html('Player 2 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                $('#winMessage p').html($('#nameTwoIn').val() + ' succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
                 break;
               case "guessThree":
-                $('#winMessage p').html('Player 3 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                $('#winMessage p').html($('#nameThreeIn').val() + ' succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
                 break;
               case "guessFour":
-                $('#winMessage p').html('Player 4 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                $('#winMessage p').html($('#nameFourIn').val() + ' succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
                 break;
               default:
                 console.log('Outside switch, time to debug.');
@@ -61,6 +65,7 @@ $(document).ready(function(){
             $('#playScreen').fadeOut(400, function(){
               $('#winScreen').fadeIn();
               $('.lastGuess').empty();
+              $('.lastGuess').css({"background-color": "#444444"});
               $('#totalGuess').empty();
               $('.guessIn').val('');
             });//end fadeOut
@@ -128,6 +133,7 @@ $(document).ready(function(){
   $('#playQuit').on('click', function(){
     $('#playScreen').fadeOut(400, function(){
       $('.lastGuess').empty();
+      $('.lastGuess').css({"background-color": "#444444"});
       $('#totalGuess').empty();
       $('.guessIn').val('');
       $('#failScreen').fadeIn();
