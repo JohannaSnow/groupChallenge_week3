@@ -29,25 +29,23 @@ app.post('/guess', urlencodedParser, function(req, res){
   console.log('guess hit:', req.body);
   //check each guess against randomNum, return boolean
   var results = [];
+  console.log(req.body);
   for (var guess in req.body) {
-    results.push(Number(req.body[guess]));
-  }
-  results = results.map(function(index){
-    console.log('in map');
     var newIndex = {
-      correct: index === randomNum,
+      guess: Number(req.body[guess]),
+      player: guess
     };
+    newIndex.correct = newIndex.guess === randomNum;
     if (!newIndex.correct) {
-      if (index > randomNum) {
-        newIndex.hiLow = 'High';
+      if (newIndex.guess > randomNum) {
+        newIndex.hiLow = 'high';
       }
       else {
-        newIndex.hiLow = 'Low';
+        newIndex.hiLow = 'low';
       }
     }
-    console.log(newIndex);
-    return newIndex
-  });//end map
+    results.push(newIndex);
+  }
   res.send(results);
   //return something about how close each guess is
 });

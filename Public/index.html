@@ -55,29 +55,27 @@
 </div>
 <div id="playScreen" class="container gameScreen">
   <div id="playTitle" class="row">
-    <h1>Deactivate Hal</h1>
-    <h2>Guess a Number</h2>
-
     <div class="gameTitle row">
       2016: A Number Odyssey
     </div>
     <div id="playTitleText" class="row">
       <p>
-        To deactivate Hal, guess a random number between 1 and <text id="maxNumText">9000</text>.
+        To deactivate Hal, guess the random number that will unlock the emergency airlock.<br>
+        It is a number between 1 and <text id="maxNumText">9000</text>.
       </p>
     </div>
   </div>
   <div id="playField" class="row">
-    <div class="playColumn ">
+    <div class="playColumn col-xs-3">
       <input id="pOneIn" class="guessIn" data-type="number"></input>
       <input id="pTwoIn" class="guessIn" data-type="number"></input>
     </div>
-    <div class="playResults">
+    <div class="playResults col-xs-6">
       <div class="row">
-        <div id="pOneGuess" class="lastGuess">
+        <div id="pOneGuess" class="lastGuess col-xs-6">
 
         </div>
-        <div id="pThreeGuess" class="lastGuess">
+        <div id="pThreeGuess" class="lastGuess col-xs-6">
 
         </div>
       </div>
@@ -85,31 +83,39 @@
 
       </div>
       <div class="row">
-        <div id="pTwoGuess" class="lastGuess">
+        <div id="pTwoGuess" class="lastGuess col-xs-6">
 
         </div>
-        <div id="pFourGuess" class="lastGuess">
+        <div id="pFourGuess" class="lastGuess col-xs-6">
 
         </div>
       </div>
     </div>
-    <div class="playColumn">
+    <div class="playColumn col-xs-3">
       <input id="pThreeIn" class="guessIn" data-type="number"></input>
       <input id="pFourIn" class="guessIn" data-type="number"></input>
     </div>
   </div>
   <div id="playChoices" class="row">
-    <button id="playSubmit" class="btn">Attempt Deactivation Protocol</button>
-    <button id="playQuit" class="btn">Abandon All Hope</button>
+    <button id="playSubmit" class="btn btn-primary">Attempt Deactivation Protocol</button>
+    <button id="playQuit" class="btn btn-danger">Abandon All Hope</button>
   </div>
 </div>
 
-<div id="resultScreen" class="container gameScreen">
-  <div id="resultMessage" class="row">
-
+<div id="winScreen" class="container resultScreen">
+  <div id="winMessage" class="row">
+    <p>You win</p>
   </div>
-  <div id="resultChoices" class="row">
-    <button id="resultRestart" class="btn">Play Again!</button>
+  <div id="winChoices" class="row">
+    <button id="winRestart" class="btn resultRestart">Play Again!</button>
+  </div>
+</div>
+<div id="failScreen" class="container resultScreen">
+  <div id="failMessage" class="row">
+    <p>You Lose</p>
+  </div>
+  <div id="failChoices" class="row">
+    <button id="failRestart" class="btn resultRestart">Play Again!</button>
   </div>
 </div>
 

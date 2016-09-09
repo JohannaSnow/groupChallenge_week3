@@ -7,9 +7,10 @@ body{
   width:90%;
   border: 1px solid black;
 }
-.btn {
+.btn, .guessIn {
   color: black;
 }
+
 .gameTitle {
   font-size: 30px;
 }
@@ -22,10 +23,18 @@ body{
   color: darkcyan;
 }
 
+.playResults {
+  height: 300px;
+  background-color: #444444;
+}
+
 #playScreen {
   display: none;
 }
-#resultScreen {
+#winScreen {
+  display: none;
+}
+#failScreen {
   display: none;
 }
 /*#startScreen {
@@ -33,4 +42,8 @@ body{
 }*/
 .halImage{
   width: 200px;
+}
+.lastGuess{
+  height: auto;
+
 }
