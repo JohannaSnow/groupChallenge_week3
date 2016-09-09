@@ -83,7 +83,7 @@ $(document).ready(function(){
           for (var i = 0; i < data.length; i++) {
             switch (data[i].player) {
               case "guessOne":
-                $('#pOneGuess').html('<p>Player 1 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+                $('#pOneGuess').html('<p>Player 1 guessed: ' + data[i].guess + '<br>Their number is too ' + data[i].hiLow + '</p>');
                 if(data[i].hiLow == 'low'){
                   $('#pOneGuess').css({"background-color": "#428bca"});
                 }
@@ -92,7 +92,7 @@ $(document).ready(function(){
                 }
                 break;
               case "guessTwo":
-                $('#pTwoGuess').html('<p>Player 2 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+                $('#pTwoGuess').html('<p>Player 2 guessed: ' + data[i].guess + '<br>Their number is too ' + data[i].hiLow + '</p>');
                 if(data[i].hiLow == 'low'){
                   $('#pTwoGuess').css({"background-color": "#428bca"});
                 }
@@ -101,7 +101,7 @@ $(document).ready(function(){
                 }
                 break;
               case "guessThree":
-                $('#pThreeGuess').html('<p>Player 3 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+                $('#pThreeGuess').html('<p>Player 3 guessed: ' + data[i].guess + '<br>Their number is too ' + data[i].hiLow + '</p>');
                 if(data[i].hiLow == 'low'){
                   $('#pThreeGuess').css({"background-color": "#428bca"});
                 }
@@ -110,7 +110,7 @@ $(document).ready(function(){
                 }
                 break;
               case "guessFour":
-                $('#pFourGuess').html('<p>Player 4 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+                $('#pFourGuess').html('<p>Player 4 guessed: ' + data[i].guess + '<br>Their number is too ' + data[i].hiLow + '</p>');
                 if(data[i].hiLow == 'low'){
                   $('#pFourGuess').css({"background-color": "#428bca"});
                 }
