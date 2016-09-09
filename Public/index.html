@@ -26,92 +26,92 @@
       </div>
     </div>
     <div id="startInfo" class="row">
-      <div class="btn-group">
-      <div class="startInstructions row">
-        <h4 class="humanText">Dr. Poole: "Unfortunately that sounds a little like famous last words."</h4>
-        <div class="gameText">
-          <p>Dave: The HAL 9000 has been proven to be malfunctioning.  We have no choice but disconnection.<br>
-            You four players must guess the correct random integer to<br>
-            manually open the emergency airlock and disconnect HAL.
-          </p>
+        <div class="startInstructions row">
+          <h4 class="humanText">Dr. Poole: "Unfortunately that sounds a little like famous last words."</h4>
+          <div class="gameText">
+            <p>Dave: The HAL 9000 has been proven to be malfunctioning.<br>
+              We have no choice but disconnection.<br>
+              You four astronauts must guess the correct random integer<br>
+              to manually open the emergency airlock and disconnect HAL.
+            </p>
+            <img class="halImage" src="images/halimage.png" alt="Hal 9000 Image" />
         </div>
-        <img src="images/halimage.png" alt="Hal 9000 Image" class="halImage"/>
       </div>
     </div>
     <div id="startChoices" class="row">
       <div class="startSettings">
         <h4 class="gameText">Select Mission Parameters</h4>
-        <p class="gameText">The upper limit of your guessing range will be:</p>
-        <select id="maxNumSelect" class="btn">
-          <option value=10>10</option>
-          <option value=50>50</option>
-          <option value=100>100</option>
-          <option value=9000>9000</option>
-        </select>
-      </div>
-      <button id="startButton" class="btn row">Join Dave and Start Guessing</button>
-    </div>
-  </div>
-
-  <div id="playScreen" class="container gameScreen">
-    <div id="playTitle" class="row">
-      <h1>Deactivate Hal</h1>
-      <h2>Guess a Number</h2>
-
-      <div class="gameTitle row">
-        2016: A Number Odyssey
-      </div>
-      <div id="playTitleText" class="row">
-        <p>
-          To deactivate Hal, guess a random number between 0 and <text id="maxNumText">9000</text>.
+        <p class="gameText">The upper limit of your guessing range will be:
+          <select id="maxNumSelect" class="btn">
+            <option value=10>10</option>
+            <option value=50>50</option>
+            <option value=100>100</option>
+            <option value=9000>9000</option>
+          </select>
         </p>
       </div>
+      <button id="startButton" class="btn btn-danger row">Join Dave:<br>Begin Deactivation Protocol</button>
     </div>
-    <div id="playField" class="row">
-      <div class="playColumn">
-        <input id="pOneIn" class="guessIn" data-type="number"></input>
-        <input id="pTwoIn" class="guessIn" data-type="number"></input>
-      </div>
-      <div class="playResults">
-        <div class="row">
-          <div id="pOneGuess" class="lastGuess">
+</div>
+<div id="playScreen" class="container gameScreen">
+  <div id="playTitle" class="row">
+    <h1>Deactivate Hal</h1>
+    <h2>Guess a Number</h2>
 
-          </div>
-          <div id="pThreeGuess" class="lastGuess">
-
-          </div>
-        </div>
-        <div id="totalGuess" class="row">
-
-        </div>
-        <div class="row">
-          <div id="pTwoGuess" class="lastGuess">
-
-          </div>
-          <div id="pFourGuess" class="lastGuess">
-
-          </div>
-        </div>
-      </div>
-      <div class="playColumn">
-        <input id="pThreeIn" class="guessIn" data-type="number"></input>
-        <input id="pFourIn" class="guessIn" data-type="number"></input>
-      </div>
+    <div class="gameTitle row">
+      2016: A Number Odyssey
     </div>
-    <div id="playChoices" class="row">
-      <button id="playSubmit" class="btn">Submit Guesses</button>
-      <button id="playQuit" class="btn">Abandon All Hope</button>
+    <div id="playTitleText" class="row">
+      <p>
+        To deactivate Hal, guess a random number between 1 and <text id="maxNumText">9000</text>.
+      </p>
     </div>
   </div>
-
-  <div id="resultScreen" class="container gameScreen">
-    <div id="resultMessage" class="row">
-
+  <div id="playField" class="row">
+    <div class="playColumn">
+      <input id="pOneIn" class="guessIn" data-type="number"></input>
+      <input id="pTwoIn" class="guessIn" data-type="number"></input>
     </div>
-    <div id="resultChoices" class="row">
-      <button id="resultRestart" class="btn">Play Again!</button>
+    <div class="playResults">
+      <div class="row">
+        <div id="pOneGuess" class="lastGuess">
+
+        </div>
+        <div id="pThreeGuess" class="lastGuess">
+
+        </div>
+      </div>
+      <div id="totalGuess" class="row">
+
+      </div>
+      <div class="row">
+        <div id="pTwoGuess" class="lastGuess">
+
+        </div>
+        <div id="pFourGuess" class="lastGuess">
+
+        </div>
+      </div>
+    </div>
+    <div class="playColumn">
+      <input id="pThreeIn" class="guessIn" data-type="number"></input>
+      <input id="pFourIn" class="guessIn" data-type="number"></input>
     </div>
   </div>
+  <div id="playChoices" class="row">
+    <button id="playSubmit" class="btn">Attempt Deactivation Protocol</button>
+    <button id="playQuit" class="btn">Abandon All Hope</button>
+  </div>
+</div>
+
+<div id="resultScreen" class="container gameScreen">
+  <div id="resultMessage" class="row">
+
+  </div>
+  <div id="resultChoices" class="row">
+    <button id="resultRestart" class="btn">Play Again!</button>
+  </div>
+</div>
 
 </body>
 </html>
