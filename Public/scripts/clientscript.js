@@ -72,10 +72,10 @@ $(document).ready(function(){
         if (!success){
           //update numberOfGuesses display
           if (numberOfGuesses === 1) {
-            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guess</p>');
+            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guess. Please try a new set of integers.</p>');
           }
           else{
-            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guesses</p>');
+            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guesses. Please try a new set of integers.</p>');
           }
           //update lastGuess displays
           for (var i = 0; i < data.length; i++) {
