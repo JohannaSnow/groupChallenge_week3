@@ -61,14 +61,18 @@
     <div id="playTitleText" class="row">
       <p>
         To deactivate Hal, guess the random number that will unlock the emergency airlock.<br>
-        It is a number between 1 and <text id="maxNumText">9000</text>.
+        It is an integer between 1 and <text id="maxNumText">9000</text>.
       </p>
     </div>
   </div>
   <div id="playField" class="row">
     <div class="playColumn col-xs-3">
-      <input id="pOneIn" class="guessIn" type='number' data-type="number"></input>
-      <input id="pTwoIn" class="guessIn" type='number' data-type="number"></input>
+      <div class="row">
+        <input id="pOneIn" class="guessIn" type='number' data-type="number" tabindex="1"></input>
+      </div>
+      <div class="row">
+        <input id="pThreeIn" class="guessIn" type='number' data-type="number" tabindex="3"></input>
+      </div>
     </div>
     <div class="playResults col-xs-6">
       <div class="row">
@@ -80,7 +84,7 @@
         </div>
       </div>
       <div id="totalGuess" class="row">
-
+        <p>       </p>
       </div>
       <div class="row">
         <div id="pTwoGuess" class="lastGuess col-xs-6">
@@ -92,13 +96,17 @@
       </div>
     </div>
     <div class="playColumn col-xs-3">
-      <input id="pThreeIn" class="guessIn" type='number' data-type="number"></input>
-      <input id="pFourIn" class="guessIn" type='number' data-type="number"></input>
+      <div class="row">
+        <input id="pTwoIn" class="guessIn" type='number' data-type="number" tabindex="2"></input>
+        </div>
+      <div class="row">
+        <input id="pFourIn" class="guessIn" type='number' data-type="number" tabindex="4"></input>
+        </div>
     </div>
   </div>
   <div id="playChoices" class="row">
-    <button id="playSubmit" class="btn btn-primary">Attempt Deactivation Protocol</button>
-    <button id="playQuit" class="btn btn-danger">Abandon All Hope</button>
+    <button id="playSubmit" class="btn btn-primary col-xs-3 col-xs-offset-3">Attempt Deactivation Protocol</button>
+    <button id="playQuit" class="btn btn-danger col-xs-3">Abandon All Hope</button>
   </div>
 </div>
 
