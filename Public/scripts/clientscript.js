@@ -22,8 +22,9 @@ $(document).ready(function(){
     });//end ajax /submit
   });//end gameStart click function
 
-
-
+  $('#playField').on('keyup', function(){
+    $('#halPlayText').html('Dave, stop. Stop, will you? Stop, Dave. <br> Will you stop Dave? Stop, Dave.');
+});
   $('#playSubmit').on('click', function(){
     console.log('Sending Guess to server, Dave');
     var guessData = {
@@ -32,6 +33,7 @@ $(document).ready(function(){
       guessThree: $('#pThreeIn').val(),
       guessFour: $('#pFourIn').val()
     };
+
     $.ajax({
       type: 'POST',
       url: '/guess',
@@ -72,10 +74,10 @@ $(document).ready(function(){
         if (!success){
           //update numberOfGuesses display
           if (numberOfGuesses === 1) {
-            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guess</p>');
+            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guess. Please try a new set of integers.</p>');
           }
           else{
-            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guesses</p>');
+            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guesses. Please try a new set of integers.</p>');
           }
           //update lastGuess displays
           for (var i = 0; i < data.length; i++) {

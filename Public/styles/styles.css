@@ -79,8 +79,12 @@ input {
   top: 50%;
   transform: translateY(-50%);
 }
+<<<<<<< HEAD
+ 
+=======
 
 
+>>>>>>> 4580ea5187c569abffaf532550d8579f46cf7b78
 /*.resultScreen{
   height: 1000px;
 -webkit-animation: expand 5s;
