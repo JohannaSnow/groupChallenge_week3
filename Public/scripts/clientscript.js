@@ -22,8 +22,9 @@ $(document).ready(function(){
     });//end ajax /submit
   });//end gameStart click function
 
-
-
+  $('#playField').on('keyup', function(){
+    $('#halPlayText').html('Dave, stop. Stop, will you? Stop, Dave. <br> Will you stop Dave? Stop, Dave.');
+});
   $('#playSubmit').on('click', function(){
     console.log('Sending Guess to server, Dave');
     var guessData = {
@@ -32,6 +33,7 @@ $(document).ready(function(){
       guessThree: $('#pThreeIn').val(),
       guessFour: $('#pFourIn').val()
     };
+
     $.ajax({
       type: 'POST',
       url: '/guess',
