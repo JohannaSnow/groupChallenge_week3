@@ -30,13 +30,6 @@ input {
   border: 1px solid black;
 }
 
-#playScreen {
-  background-color: transparent;
-  background-image: url("images/halimage.png");
-  background-position: top center;
-  background-size: auto;
-}
-
 #totalGuess p {
   position: relative;
   top: 50%;
