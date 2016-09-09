@@ -22,8 +22,9 @@ $(document).ready(function(){
     });//end ajax /submit
   });//end gameStart click function
 
-
-
+  $('#playField').on('keyup', function(){
+    $('#halPlayText').html('Dave, stop. Stop, will you? Stop, Dave. <br> Will you stop Dave? Stop, Dave.');
+});
   $('#playSubmit').on('click', function(){
     console.log('Sending Guess to server, Dave');
     var guessData = {
@@ -32,6 +33,7 @@ $(document).ready(function(){
       guessThree: $('#pThreeIn').val(),
       guessFour: $('#pFourIn').val()
     };
+
     $.ajax({
       type: 'POST',
       url: '/guess',
@@ -42,6 +44,22 @@ $(document).ready(function(){
         var success = false;
         for (var i = 0; i < data.length; i++) {
           if (data[i].correct) {
+            switch (data[i].player) {
+              case "guessOne":
+                $('#winMessage p').html('Player 1 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                break;
+              case "guessTwo":
+                $('#winMessage p').html('Player 2 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                break;
+              case "guessThree":
+                $('#winMessage p').html('Player 3 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                break;
+              case "guessFour":
+                $('#winMessage p').html('Player 4 succeeded! ' + data[i].guess + ' was the correct integer. Dave has deactivated HAL.');
+                break;
+              default:
+                console.log('Outside switch, time to debug.');
+            }//end switch
             $('#playScreen').fadeOut(400, function(){
               $('#winScreen').fadeIn();
               $('.lastGuess').empty();
@@ -56,25 +74,49 @@ $(document).ready(function(){
         if (!success){
           //update numberOfGuesses display
           if (numberOfGuesses === 1) {
-            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guess</p>');
+            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guess. Please try a new set of integers.</p>');
           }
           else{
-            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guesses</p>');
+            $('#totalGuess').html('<p>Each player has made ' + numberOfGuesses + ' guesses. Please try a new set of integers.</p>');
           }
           //update lastGuess displays
           for (var i = 0; i < data.length; i++) {
             switch (data[i].player) {
               case "guessOne":
-                $('#pOneGuess').html('<p>Player 1 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+                $('#pOneGuess').html('<p>Player 1 guessed: ' + data[i].guess + '<br>Their number is too ' + data[i].hiLow + '</p>');
+                if(data[i].hiLow == 'low'){
+                  $('#pOneGuess').css({"background-color": "#428bca"});
+                }
+                else {
+                  $('#pOneGuess').css({"background-color": "#d9534f"});
+                }
                 break;
               case "guessTwo":
-                $('#pTwoGuess').html('<p>Player 2 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+                $('#pTwoGuess').html('<p>Player 2 guessed: ' + data[i].guess + '<br>Their number is too ' + data[i].hiLow + '</p>');
+                if(data[i].hiLow == 'low'){
+                  $('#pTwoGuess').css({"background-color": "#428bca"});
+                }
+                else {
+                  $('#pTwoGuess').css({"background-color": "#d9534f"});
+                }
                 break;
               case "guessThree":
-                $('#pThreeGuess').html('<p>Player 3 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+                $('#pThreeGuess').html('<p>Player 3 guessed: ' + data[i].guess + '<br>Their number is too ' + data[i].hiLow + '</p>');
+                if(data[i].hiLow == 'low'){
+                  $('#pThreeGuess').css({"background-color": "#428bca"});
+                }
+                else {
+                  $('#pThreeGuess').css({"background-color": "#d9534f"});
+                }
                 break;
               case "guessFour":
-                $('#pFourGuess').html('<p>Player 4 guessed: ' + data[i].guess + '</p><p>Their number is too ' + data[i].hiLow + '</p>');
+                $('#pFourGuess').html('<p>Player 4 guessed: ' + data[i].guess + '<br>Their number is too ' + data[i].hiLow + '</p>');
+                if(data[i].hiLow == 'low'){
+                  $('#pFourGuess').css({"background-color": "#428bca"});
+                }
+                else {
+                  $('#pFourGuess').css({"background-color": "#d9534f"});
+                }
                 break;
               default:
                 console.log('Outside switch, time to debug.');
