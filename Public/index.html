@@ -59,8 +59,10 @@
       2016: A Number Odyssey
     </div>
     <div id="playTitleText" class="row">
+      <p id="halPlayText" class="halText">
+        HAL: Just what do you think you're doing, Dave?
       <p>
-        To deactivate Hal, guess the random number that will unlock the emergency airlock.<br>
+        To deactivate HAL, guess the random number that will unlock the emergency airlock.<br>
         It is an integer between 1 and <text id="maxNumText">9000</text>.
       </p>
     </div>
@@ -69,6 +71,8 @@
     <div class="playColumn col-xs-3">
       <div class="row">
         <input id="pOneIn" class="guessIn" type='number' data-type="number" tabindex="1"></input>
+      </div>
+      <div class="row">
       </div>
       <div class="row">
         <input id="pThreeIn" class="guessIn" type='number' data-type="number" tabindex="3"></input>
@@ -98,7 +102,9 @@
     <div class="playColumn col-xs-3">
       <div class="row">
         <input id="pTwoIn" class="guessIn" type='number' data-type="number" tabindex="2"></input>
-        </div>
+      </div>
+      <div class="row">
+      </div>
       <div class="row">
         <input id="pFourIn" class="guessIn" type='number' data-type="number" tabindex="4"></input>
         </div>

@@ -40,7 +40,7 @@ Just what do you think you're doing, Dave?
 Dave, stop. Stop, will you? Stop, Dave. Will you stop Dave? Stop, Dave.
 
 
-HAL video when fail?
+HAL audio when fail? With image of dead floating astronaut?
 --------------------
 HAL: I'm sorry, Frank, I think you missed it. Queen to Bishop 3, Bishop takes Queen, Knight takes Bishop. Mate.
 Dr. Frank Poole: Huh. Yeah, looks like you're right. I resign.
