@@ -128,17 +128,19 @@
 
 <div id="winScreen" class="container resultScreen">
   <div id="winMessage" class="row">
-    <p>You win</p>
-    <img src="images/monolith.png" alt="Monolith" />
+    <div class="monolith">
+    <p>Well Done! HAL was disconnected and humanity has evolved!</p>
+    <marquee><img src="images/monolith.png" alt="Monolith" /></marquee>
   </div>
+</div>
   <div id="winChoices" class="row">
     <button id="winRestart" class="btn resultRestart">Play Again!</button>
   </div>
 </div>
 <div id="failScreen" class="container resultScreen">
   <div id="failMessage" class="row">
-    <p>You Lose</p>
-    <img src="images/frankpoole.png" alt="you lose" />
+    <p>You failed. HAL has killed the entire crew.</p>
+    <marquee><img src="images/frankpoole.png" alt="you lose" /></marquee>
   </div>
   <div id="failChoices" class="row">
     <button id="failRestart" class="btn resultRestart">Play Again!</button>
