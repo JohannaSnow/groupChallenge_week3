@@ -1,8 +1,41 @@
 body{
+  font-size: 20px;
   text-align: center;
   background-color: black;
   color: lightgray;
 }
+
+h4 {
+  font-size: 30px;
+}
+
+input {
+  text-align: center;
+}
+
+#playScreen {
+  display: none;
+}
+#winScreen {
+  display: none;
+}
+#failScreen {
+  display: none;
+}
+/*#startScreen {
+  display: none;
+}*/
+
+#playSubmit, #playQuit {
+  border: 1px solid black;
+}
+
+#totalGuess p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .container {
   width:90%;
   border: 1px solid black;
@@ -12,7 +45,8 @@ body{
 }
 
 .gameTitle {
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .halText {
@@ -28,18 +62,6 @@ body{
   background-color: #444444;
 }
 
-#playScreen {
-  display: none;
-}
-#winScreen {
-  display: none;
-}
-#failScreen {
-  display: none;
-}
-/*#startScreen {
-  display: none;
-}*/
 .halImage {
   width: 200px;
 }
@@ -48,14 +70,8 @@ body{
   border: 1px solid black;
 }
 
-#playSubmit, #playQuit {
-  border: 1px solid black;
-}
-
-#totalGuess p {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.pGridBox {
+  height: 100px;
 }
 
 .lastGuess p {
@@ -64,13 +80,6 @@ body{
   transform: translateY(-50%);
 }
 
-input {
-  text-align: center;
-}
-
-.pGridBox {
-  height: 100px;
-}
 
 /*.resultScreen{
   height: 1000px;
